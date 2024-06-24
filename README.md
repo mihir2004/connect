@@ -29,7 +29,7 @@ Connect is a web application similar to Linktree that allows users to create a p
 - **Authentication:** JWT (JSON Web Tokens)
 - **Hosting:** Vercel (or similar)
 
-````sql
+
 
 
 ## Installation
@@ -90,4 +90,4 @@ Connect is a web application similar to Linktree that allows users to create a p
 
 ## License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-````
+
