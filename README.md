@@ -27,28 +27,7 @@ Connect is a web application similar to Linktree that allows users to create a p
 - **Backend:** Node.js, Express.js
 - **Database:** MongoDB
 - **Authentication:** JWT (JSON Web Tokens)
-- **Hosting:** Heroku (or similar)
-
-## Project Structure
-
-connect/
-├── client/ # Frontend code
-│ ├── public/
-│ └── src/
-│ ├── components/ # React components
-│ ├── pages/ # React pages
-│ ├── services/ # API service calls
-│ └── App.js # Main React component
-├── server/ # Backend code
-│ ├── config/ # Configuration files
-│ ├── controllers/ # Route controllers
-│ ├── models/ # Mongoose models
-│ ├── routes/ # Express routes
-│ └── server.js # Main server file
-├── .gitignore
-├── package.json
-├── README.md
-└── yarn.lock
+- **Hosting:** Vercel (or similar)
 
 ````sql
 
