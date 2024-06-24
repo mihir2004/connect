@@ -1,36 +1,114 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Connect
 
-## Getting Started
+Connect is a web application similar to Linktree that allows users to create a personalized page containing links to their social media profiles, websites, and other online content. This project is built using modern web technologies to ensure a smooth and responsive user experience.
 
-First, run the development server:
+## Table of Contents
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- [Features](#features)
+- [Tech Stack](#tech-stack)
+- [Project Structure](#project-structure)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Working](#working)
+- [API Endpoints](#api-endpoints)
+- [Contributing](#contributing)
+- [License](#license)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Features
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+- User authentication and authorization
+- Create and manage a personalized profile with multiple links
+- Responsive design for mobile and desktop
+- Easy link management with drag-and-drop functionality
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Tech Stack
 
-## Learn More
+- **Frontend:** HTML, CSS, JavaScript, React
+- **Backend:** Node.js, Express.js
+- **Database:** MongoDB
+- **Authentication:** JWT (JSON Web Tokens)
+- **Hosting:** Heroku (or similar)
 
-To learn more about Next.js, take a look at the following resources:
+## Project Structure
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+connect/
+├── client/ # Frontend code
+│ ├── public/
+│ └── src/
+│ ├── components/ # React components
+│ ├── pages/ # React pages
+│ ├── services/ # API service calls
+│ └── App.js # Main React component
+├── server/ # Backend code
+│ ├── config/ # Configuration files
+│ ├── controllers/ # Route controllers
+│ ├── models/ # Mongoose models
+│ ├── routes/ # Express routes
+│ └── server.js # Main server file
+├── .gitignore
+├── package.json
+├── README.md
+└── yarn.lock
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+````sql
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Installation
+1. Clone the repository:
+    ```sh
+    git clone https://github.com/mihir2004/connect.git
+    cd connect
+    ```
+2. Install dependencies for both client and server:
+    ```sh
+    cd client
+    yarn install
+    cd ../server
+    yarn install
+    ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Usage
+1. Start the server:
+    ```sh
+    cd server
+    yarn start
+    ```
+2. Start the client:
+    ```sh
+    cd client
+    yarn start
+    ```
+3. Open your browser and go to `http://localhost:3000` to see the application in action.
+
+## Working
+1. **User Registration and Login**: Users can register for an account and log in using their credentials. The application uses JWT for secure authentication.
+2. **Profile Creation**: Once logged in, users can create a profile where they can add multiple links to their social media accounts, websites, or any other online resources.
+3. **Link Management**: Users can easily add, update, and delete links through a user-friendly interface. The links can be reordered using a drag-and-drop feature.
+4. **Public Profile**: Each user gets a unique URL that they can share, which displays their profile with all the links they have added.
+
+## API Endpoints
+### Authentication
+- `POST /api/auth/register` - Register a new user
+- `POST /api/auth/login` - Log in an existing user
+
+### User Profile
+- `GET /api/user/:id` - Get user profile by ID
+- `PUT /api/user/:id` - Update user profile
+
+### Links
+- `GET /api/links/:userId` - Get all links for a user
+- `POST /api/links` - Create a new link
+- `PUT /api/links/:linkId` - Update a link
+- `DELETE /api/links/:linkId` - Delete a link
+
+## Contributing
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature-branch`).
+3. Make your changes.
+4. Commit your changes (`git commit -am 'Add new feature'`).
+5. Push to the branch (`git push origin feature-branch`).
+6. Create a new Pull Request.
+
+## License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+````
